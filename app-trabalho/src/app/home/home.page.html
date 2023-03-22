@@ -1,38 +1,66 @@
-<ion-menu contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header [translucent]="true">
+  <ion-row class="ion-align-items-center header-line">
+    <ion-col size="2" class="menu-icon">
+      <ion-icon name="reorder-three"></ion-icon>
+    </ion-col>
+    <ion-col size="8" class="nome.Lanchonete">
+      Lanchonete
+    </ion-col>
+    <ion-col size="2" class="ion-text-end account-icon">
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center header-subline">
+      <ion-col *ngFor="let categoria of categorias; let ix = index" [ngClass]="categoria.codigo == selected ? 'slide-actived' : 'slide-no-actived'" (click)="setSelected(categoria.codigo)">
+        {{ categoria.nome }}
+      </ion-col>     
+  </ion-row>
   
-</ion-menu>
-<div class="ion-page" id="main-content"  >
-  <ion-header >
-    <ion-toolbar>
-      <ion-icon slot="end" size="large" name="person-circle-outline"></ion-icon>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>UniFCV Salgados</ion-title>
-    </ion-toolbar>
-  </ion-header>
+</ion-header>
 
-  <ion-content>
-     <ion-row>
-    <ion-col>
-      <ion-segment >
-        <ion-segment-button >
-          <ion-label>Pizzas</ion-label>
-        </ion-segment-button>
-        <ion-segment-button >
-          <ion-label>Burguers</ion-label>
-        </ion-segment-button>
-        </ion-segment>
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let produto of produtos; let ix = index" [hidden]="!produto.visibled">
+        <ion-col size="12" class="card-produto">
+          
+          <ion-row>
+            <ion-col size="12" class="img-produto">
+              <ion-img src="{{produto.imagens}}"></ion-img>
+            </ion-col>
+          </ion-row>
+
+          <ion-row style="height: 45px;">
+            <ion-col size="12" class="titulo-produto">
+              {{produto.nome}}
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="12" class="valor-produto">
+              {{produto.valor}}
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="12" class="col-botao-detalhes">
+              <span class="botao-detalhes"> Detalhes </span>
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
       </ion-col>
-
     </ion-row>
-  </ion-content>
-   
 
-
-
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-row class="carinho">
+    <ion-col >
+      <ion-button color="success" shape="round" size="large" >
+        <ion-icon name="cart-outline" ></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
