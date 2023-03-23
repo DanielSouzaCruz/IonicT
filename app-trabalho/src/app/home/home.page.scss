@@ -16,9 +16,7 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
@@ -26,20 +24,29 @@
   text-decoration: none;
 }
 
-.slide-no-actived{
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border: 1px solid transparent;
+.header{
+  background-color: rgb(141, 123, 123);
 }
 
-.slide-actived{
-  font-weight: 500;
-  border: 1px solid var(--white-smoke);
-  border-radius: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.sessaoescolhida{
+  background-color: rgb(252, 252, 252);
+  text-align: center;
+}
+
+.sessaosemescolha{
+  background-color: rgb(31, 28, 28);
+  text-align: center;
+  color: white;
 }
 
 .carinho {
  text-align: end;
+}
+
+.detalhes {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgb(59, 54, 54);
+  margin-top: 50px;
+  border-radius: 12px;
 }

@@ -1,18 +1,18 @@
 <ion-header [translucent]="true">
-  <ion-row class="ion-align-items-center header-line">
-    <ion-col size="2" class="menu-icon">
-      <ion-icon name="reorder-three"></ion-icon>
+  <ion-row class="ion-align-items-center header-line" class="header">
+    <ion-col size="1" class="menu-icon" size="20px">
+      <ion-icon name="reorder-three" size="large"></ion-icon>
     </ion-col>
-    <ion-col size="8" class="nome.Lanchonete">
-      Lanchonete
+    <ion-col size="10" class="ion-text-center">
+      LANCHONETE
     </ion-col>
-    <ion-col size="2" class="ion-text-end account-icon">
-      <ion-icon name="person-circle-outline"></ion-icon>
+    <ion-col size="1" class="ion-text-end" size="20px">
+      <ion-icon name="person-circle-outline" size="large" item-right></ion-icon>
     </ion-col>
   </ion-row>
 
-  <ion-row class="ion-align-items-center header-subline">
-      <ion-col *ngFor="let categoria of categorias; let ix = index" [ngClass]="categoria.codigo == selected ? 'slide-actived' : 'slide-no-actived'" (click)="setSelected(categoria.codigo)">
+  <ion-row class="ion-align-items-center">
+      <ion-col *ngFor="let categoria of categorias; let ix = index" [ngClass]="categoria.codigo == selecaodecardapio ? 'sessaoescolhida' : 'sessaosemescolha'"   (click)="irselecao(categoria.codigo)">
         {{ categoria.nome }}
       </ion-col>     
   </ion-row>
@@ -23,36 +23,40 @@
   <ion-grid>
     <ion-row>
       <ion-col size="6" *ngFor="let produto of produtos; let ix = index" [hidden]="!produto.visibled">
-        <ion-col size="12" class="card-produto">
-          
-          <ion-row>
-            <ion-col size="12" class="img-produto">
-              <ion-img src="{{produto.imagens}}"></ion-img>
-            </ion-col>
-          </ion-row>
+        <ion-row>
+          <ion-col size="12" class="detalhes">
+            
+            <ion-row>
+              <ion-col size="12" (click)="irnoproduto(produto)">
+                <img [src]="pathImgs + produto.imagens"/>
+              </ion-col>
+            </ion-row>
 
-          <ion-row style="height: 45px;">
-            <ion-col size="12" class="titulo-produto">
-              {{produto.nome}}
-            </ion-col>
-          </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                {{produto.nome}}
+              </ion-col>
+            </ion-row>
 
-          <ion-row>
-            <ion-col size="12" class="valor-produto">
-              {{produto.valor}}
-            </ion-col>
-          </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                {{ produto.valor}}
+              </ion-col>
+            </ion-row>
 
-          <ion-row>
-            <ion-col size="12" class="col-botao-detalhes">
-              <span class="botao-detalhes"> Detalhes </span>
-            </ion-col>
-          </ion-row>
-
-        </ion-col>
+            <ion-row>
+              <ion-col size="12">
+                <ion-button color="warning" size="large" >
+                  Detalhes
+                </ion-button>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
-
+   
   </ion-grid>
 </ion-content>
 <ion-footer>
