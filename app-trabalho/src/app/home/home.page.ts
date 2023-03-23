@@ -14,7 +14,8 @@ export class HomePage {
     { codigo: 1, nome: 'Pizzas'    },
     { codigo: 2, nome: 'Burguers'  },
     { codigo: 3, nome: 'Assados'   },
-    { codigo: 4, nome: 'Cachorrão' }
+    { codigo: 4, nome: 'Cachorrão' },
+    {codigo: 5, nome: 'Bebidas'}
   ]
   
   public produtos = [
@@ -29,7 +30,11 @@ export class HomePage {
     {codigo: 9, categoria : 3, valor : 10.00, descricao : 'lorem ipsum', nome: 'Bauru', imagens : ['bauro_resized.jpg'], visibled : false},
     {codigo: 10, categoria : 4, valor : 12.00, descricao : 'lorem ipsum', nome: 'Cachorro Quente de Cenoura', imagens : ['cenoura_resized.jpg'], visibled : false},
     {codigo: 11, categoria : 4, valor : 19.00, descricao : 'lorem ipsum', nome: 'Cachorro Quente Completo', imagens : ['completo_resized.jpg'], visibled : false},
-    {codigo: 12, categoria : 4, valor : 25.00, descricao : 'lorem ipsum', nome: 'Cachorro Quente Duplo', imagens : ['duplo_resized.jpg'], visibled : false}
+    {codigo: 12, categoria : 4, valor : 25.00, descricao : 'lorem ipsum', nome: 'Cachorro Quente Duplo', imagens : ['duplo_resized.jpg'], visibled : false},
+    {codigo: 13, categoria : 5, valor : 1.50, descricao : 'lorem ipsum', nome: 'Coca-Cola Lata 350ml', imagens : ['coca-cola-lata_resized.jpg'], visibled : false},
+    {codigo: 14, categoria : 5, valor : 5.50, descricao : 'lorem ipsum', nome: 'Guarana Antartica 2 litros', imagens : ['guarana-2-litros_resized.jpg'], visibled : false},
+    {codigo: 15, categoria : 5, valor : 200000000.50, descricao : 'lorem ipsum', nome: 'Power Monster 500ml Vergil', imagens : ['monster_resized.png'], visibled : false},
+    {codigo: 16, categoria : 5, valor : 5.50, descricao : 'lorem ipsum', nome: 'Suco Prats 2 Litros', imagens : ['prats_resized.jpg'], visibled : false}
   ]
 
   public selecaodecardapio : any;
