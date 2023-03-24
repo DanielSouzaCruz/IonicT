@@ -9,7 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 export class ProdutosPage implements OnInit {
 
   public pathImgs   = '../../assets/img/';
-
+  public pedidoquantidade = 0;
+  
   public produto = {
     codigo      : 0, 
     categoria   : 0, 
@@ -26,6 +27,16 @@ export class ProdutosPage implements OnInit {
     });
   }
 
+  public acrescentaQuantidade(){
+    this.pedidoquantidade += 1
+  }
+
+  public diminuiQuantidade(){
+    if(this.pedidoquantidade > 0){
+      this.pedidoquantidade -= 1
+    }
+  }
+  
   ngOnInit() {
   }
 

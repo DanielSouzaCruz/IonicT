@@ -9,14 +9,72 @@
 
 <ion-content>
   <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-col size="12" class="texto-alinhado">
+              
+            <ion-row class="ion-align-items-center">
+              <ion-col size="12" class="ion-text-center">
+                <img [src]="pathImgs + produto.imagens" class="imagem"/>
+              </ion-col>
+            </ion-row> 
+                
+            <ion-row>
+              <ion-col size="12" class="ion-text-center">
+                {{produto.nome}}
+              </ion-col>
+            </ion-row>
 
-    <ion-slides pager="true">
-      <ion-slide *ngFor="let imagem of produto.imagens; let ix = index">
-        <ion-img [src]="pathImgs + imagem"></ion-img>
-      </ion-slide>
-    </ion-slides>
+            <ion-row>
+              <ion-col size="12" class="ion-text-center">
+                {{ produto.valor}}
+              </ion-col>
+            </ion-row>
 
-
+            <ion-row>
+              <ion-col size="12" class="ion-text-center">
+                {{produto.descricao}}
+              </ion-col>
+            </ion-row>
+              
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
   </ion-grid>
-  
 </ion-content>
+
+<ion-footer>
+  <ion-row class="ion-align-items-center">
+    <ion-col style="background-color: gray">
+      <ion-row>
+        
+        <ion-col class="valor">
+          {{produto.valor}}
+        </ion-col>
+         
+        <ion-col>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="4" class="objetos">
+              <ion-button color="success" (click)="acrescentaQuantidade()">
+                <ion-icon name="add" ></ion-icon>
+              </ion-button>
+            </ion-col>
+            
+            <ion-col size="4" class="quantidade" >
+                {{pedidoquantidade}}
+            </ion-col>
+            
+            <ion-col size="4" class="objetos">
+              <ion-button color="danger"  (click)="diminuiQuantidade()">
+                <ion-icon name="remove"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+
+      </ion-row>  
+    </ion-col>
+  </ion-row> 
+</ion-footer>

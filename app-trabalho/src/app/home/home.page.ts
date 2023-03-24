@@ -33,8 +33,8 @@ export class HomePage {
     {codigo: 12, categoria : 4, valor : 25.00, descricao : 'lorem ipsum', nome: 'Cachorro Quente Duplo', imagens : ['duplo_resized.jpg'], visibled : false},
     {codigo: 13, categoria : 5, valor : 1.50, descricao : 'lorem ipsum', nome: 'Coca-Cola Lata 350ml', imagens : ['coca-cola-lata_resized.jpg'], visibled : false},
     {codigo: 14, categoria : 5, valor : 5.50, descricao : 'lorem ipsum', nome: 'Guarana Antartica 2 litros', imagens : ['guarana-2-litros_resized.jpg'], visibled : false},
-    {codigo: 15, categoria : 5, valor : 200000000.50, descricao : 'lorem ipsum', nome: 'Power Monster 500ml Vergil', imagens : ['monster_resized.png'], visibled : false},
-    {codigo: 16, categoria : 5, valor : 5.50, descricao : 'lorem ipsum', nome: 'Suco Prats 2 Litros', imagens : ['prats_resized.jpg'], visibled : false}
+    {codigo: 15, categoria : 5, valor : 20.50, descricao : 'lorem ipsum', nome: 'Power Monster 500ml Vergil', imagens : ['monster_resized.png'], visibled : false},
+    {codigo: 16, categoria : 5, valor : 6.50, descricao : 'lorem ipsum', nome: 'Suco Prats 2 Litros', imagens : ['prats_resized.jpg'], visibled : false}
   ]
 
   public selecaodecardapio : any;
