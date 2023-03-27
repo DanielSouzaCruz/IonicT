@@ -11,6 +11,7 @@ export class ProdutosPage implements OnInit {
   public pathImgs   = '../../assets/img/';
   public pedidoquantidade = 0;
   
+  
   public produto = {
     codigo      : 0, 
     categoria   : 0, 
@@ -20,6 +21,8 @@ export class ProdutosPage implements OnInit {
     imagens     : [], 
     visibled    : false
   }
+  
+  
 
   constructor(private route: ActivatedRoute) { 
     this.route.queryParams.subscribe(params => {
@@ -36,7 +39,12 @@ export class ProdutosPage implements OnInit {
       this.pedidoquantidade -= 1
     }
   }
-  
+
+  public valorMuitoReal = 0;
+
+  public atualizacaoPreco(){
+    this.valorMuitoReal= this.produto.valor * this.pedidoquantidade
+  }
   ngOnInit() {
   }
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -59,5 +60,6 @@ export class HomePage {
       queryParams: { produto: produto }
     });
   }
-
+ 
+ 
 }
