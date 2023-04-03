@@ -48,25 +48,25 @@
 <ion-footer>
   <ion-row class="ion-align-items-center">
     <ion-col style="background-color: gray">
-      <ion-row>
+      <ion-row class="ion-align-items-center">
         
-        <ion-col class="valor"  >
+        <ion-col size="6" class="valor"  >
           R$ {{valorMuitoReal}}
         </ion-col>
          
-        <ion-col>
+        <ion-col size="6">
           <ion-row class="ion-align-items-center">
-            <ion-col size="4" class="objetos">
+            <ion-col size="4" class="ion-text-center">
               <ion-button color="success" (click)="acrescentaQuantidade()" (click)="atualizacaoPreco()">
                 <ion-icon name="add" ></ion-icon>
               </ion-button>
             </ion-col>
             
-            <ion-col size="4" class="quantidade" >
+            <ion-col size="4" class="ion-text-center" class="quantidade" >
                 {{pedidoquantidade}}
             </ion-col>
             
-            <ion-col size="4" class="objetos">
+            <ion-col size="4" class="ion-text-center">
               <ion-button color="danger"  (click)="diminuiQuantidade()" (click)="atualizacaoPreco()">
                 <ion-icon name="remove"></ion-icon>
               </ion-button>
